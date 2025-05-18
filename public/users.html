@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель управления | Urban-GEO</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .welcome-message {
+      font-size: 1.5em;
+      margin: 20px 0;
+      color: #333;
+    }
+    .iframe-container {
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .logout-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #f44336;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Гео-Щебень</div>
+    <nav>
+      <a href="/index.html" class="logout-btn">Выйти</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Панель управления</h1>
+    <div class="welcome-message">Добро пожаловать в систему анализа урбанизации!</div>
+    
+    <div class="iframe-container">
+      <iframe
+        src="https://mmayya-geo-sheben.hf.space"
+        frameborder="0"
+        width="1000"
+        height="500"
+      ></iframe>
+    </div>
+  </div>
+</body>
+</html>

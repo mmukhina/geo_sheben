@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban-GEO</title>
+  <style>
+    /* Reset all margins and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #eef1f4;
+      padding-top: 70px;
+      /* Space for fixed header */
+    }
+
+    /* Header Styles */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      background: #1e1e1e;
+      color: white;
+      padding: 1rem 2rem;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+
+    .login-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('./main.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: -70px;
+      /* Counteract body padding */
+      padding-top: 70px;
+      /* Match header height */
+    }
+
+    /* Rest of your styles remain the same */
+    .hero-content {
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .features {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .features h2 {
+      margin-bottom: 2rem;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      position: relative;
+      width: 400px;
+      height: 300px; /* Fixed height */
+      border-radius: 10px;
+      overflow: hidden; /* Keeps everything contained */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    }
+
+    .card-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('./earth.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.7);
+      transition: transform 0.5s ease; /* Smooth background transition */
+      z-index: 1;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      padding: 1.5rem;
+      color: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-content p{
+      padding-top: 10px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Optional: Add zoom effect on hover */
+    .card:hover .card-background {
+      transform: scale(1.05);
+    }
+
+    /* Ensure features section contains the card properly */
+    .features {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* Body padding to account for fixed header */
+    body {
+      padding-top: 70px;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <body>
+    <header class="header">
+      <div class="logo">Гео-Щебень</div>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="#features">Функции</a>
+        <a href="/login.html" class="login-btn">Войти</a>
+      </nav>
+    </header>
+  
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Гео-Щебень</h2>
+        <p>Ваш помощник в анализе урбанизации города Краснодар!</p>
+        <div class="hero-buttons">
+          <a href="/login.html" class="login-btn">Начать анализ</a>
+          <a href="#features" class="login-btn"
+            style="background-color: transparent; border: 1px solid white;">Подробнее</a>
+        </div>
+      </div>
+    </section>
+
+  <section id="features" class="features">
+    <h2>НАШИ ВОЗМОЖНОСТИ</h2>
+    <div class="cards"> <!-- Added cards container -->
+      <div class="card">
+        <div class="card-background"></div>
+        <div class="card-content">
+          <h3>Анализ снимков</h3>
+          <p>Автоматизированный анализ спутниковых снимков и аэрофотосъемки</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Гео-Щебень | Анализ урбанизации Краснодара</p>
+  </footer>
+</body>
+</body>
+</html>
